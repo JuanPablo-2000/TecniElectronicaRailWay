@@ -1,6 +1,9 @@
 import app from './app';
+import dotenv from 'dotenv';
 import './database';
 import './libs/initialSetup';
 
-app.listen(4000);
-console.log('Server listening on port', 4000);
+dotenv.config();
+
+app.listen(process.env.PORT);
+console.log('Server listening on port', process.env.PORT);
