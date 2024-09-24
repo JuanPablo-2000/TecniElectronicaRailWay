@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-mongoose.connect("mongodb://mongo:iwMepxKRTzetTCPunjSndmWCTKwWeRQG@junction.proxy.rlwy.net:45558", {
+dotenv.config();
+
+mongoose.connect(process.env.CONNECTION_DATABASE, {
 })
     .then(db => console.log(db.Schema))
     .catch(error => console.log(error))
